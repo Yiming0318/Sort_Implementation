@@ -1,4 +1,4 @@
-# Sort Algo Implementation
+# Common Sort Algo Implementation
 
 ## quick sort
 
