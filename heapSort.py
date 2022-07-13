@@ -46,7 +46,7 @@ def heap_sort(array):
         None, sort in place
     """
     make_max_heap(array)
-    for i in range(len(array)-1,0,-1):
+    for i in range(len(array), 0, -1):
         delete_max(array, i)
 
 def make_max_heap(array):
@@ -67,7 +67,7 @@ def heapify(array, n, i):
         make an array to a max heap binary tree data structure
     Parameter:
         array -- array given to make max heap
-        n -- the length of array
+        n -- the length of array - 1
         i -- current start parent index for the heap tree 
     Return:
         None, transfer to max heap in place
@@ -94,7 +94,8 @@ def delete_max(array,n):
     Return:
         None, max value will be putted at the end of array
     """
-    array[0], array[n] = array[n], array[0]
+    array[0], array[n-1] = array[n-1], array[0]
+    n = n - 1
     heapify(array, n, 0)
 
 array1 = [5,4,3,2,1]
